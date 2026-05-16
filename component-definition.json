@@ -59,28 +59,6 @@
       ]
     },
     {
-      "title": "Blocks",
-      "id": "blocks",
-      "components": [
-        {
-          "title": "Search Help",
-          "id": "search-help"
-        },
-        {
-          "title": "Cards Category",
-          "id": "cards-category"
-        },
-        {
-          "title": "Cards Article",
-          "id": "cards-article"
-        },
-        {
-          "title": "Modal",
-          "id": "modal"
-        }
-      ]
-    },
-    {
       "title": "Sections",
       "id": "sections",
       "components": [
