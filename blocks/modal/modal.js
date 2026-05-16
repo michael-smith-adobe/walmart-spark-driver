@@ -1,11 +1,3 @@
-function openModal(id) {
-  const overlay = document.getElementById(id);
-  if (overlay) {
-    overlay.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  }
-}
-
 function closeModal(overlay) {
   overlay.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
@@ -13,16 +5,14 @@ function closeModal(overlay) {
 
 export default function decorate(block) {
   const rows = [...block.children];
-  const ids = [];
 
   rows.forEach((row) => {
     const cells = [...row.children];
-    const id = cells[0]?.textContent?.trim().toLowerCase().replace(/\s+/g, '-');
+    const triggerLabel = cells[0]?.textContent?.trim();
+    const id = triggerLabel.toLowerCase().replace(/\s+/g, '-');
     const parentLabel = cells[1]?.textContent?.trim() || '';
     const title = cells[2]?.textContent?.trim() || '';
     const bodyCell = cells[3];
-
-    ids.push(id);
 
     const overlay = document.createElement('div');
     overlay.className = 'modal-overlay';
@@ -70,6 +60,22 @@ export default function decorate(block) {
     overlay.addEventListener('click', (e) => {
       if (e.target === overlay) closeModal(overlay);
     });
+
+    const main = document.querySelector('main');
+    if (main) {
+      main.querySelectorAll('strong').forEach((strong) => {
+        if (strong.textContent.trim().toLowerCase() === title.toLowerCase()) {
+          const trigger = strong.closest('p') || strong;
+          trigger.classList.add('modal-trigger');
+          trigger.dataset.modal = `modal-${id}`;
+          trigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            overlay.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+          });
+        }
+      });
+    }
   });
 
   block.textContent = '';
@@ -79,16 +85,5 @@ export default function decorate(block) {
     if (e.key === 'Escape') {
       document.querySelectorAll('.modal-overlay[aria-hidden="false"]').forEach(closeModal);
     }
-  });
-
-  ids.forEach((id) => {
-    const modalId = `modal-${id}`;
-    document.querySelectorAll(`a[href="#${modalId}"], a[href$="#${modalId}"]`).forEach((link) => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        openModal(modalId);
-      });
-    });
   });
 }

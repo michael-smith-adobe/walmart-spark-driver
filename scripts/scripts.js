@@ -126,18 +126,6 @@ export function decorateMain(main) {
   decorateButtons(main);
 }
 
-document.addEventListener('click', (e) => {
-  const link = e.target.closest('a[href*="#modal-"]');
-  if (!link) return;
-  e.preventDefault();
-  const modalId = link.getAttribute('href').split('#').pop();
-  const overlay = document.getElementById(modalId);
-  if (overlay) {
-    overlay.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  }
-});
-
 /**
  * Loads everything needed to get to LCP.
  * @param {Element} doc The container element
