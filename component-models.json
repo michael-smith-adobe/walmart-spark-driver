@@ -105,22 +105,7 @@
   },
   {
     "id": "cards-category",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Icon Image",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Category Link",
-        "valueType": "string"
-      }
-    ]
+    "fields": []
   },
   {
     "id": "cards-article",
