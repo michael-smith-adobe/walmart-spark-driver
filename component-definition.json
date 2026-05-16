@@ -1,0 +1,28 @@
+{
+  "groups": [
+    {
+      "title": "Default Content",
+      "id": "default",
+      "components": [
+        { "title": "Text", "id": "text" },
+        { "title": "Title", "id": "title" },
+        { "title": "Image", "id": "image" },
+        { "title": "Button", "id": "button" }
+      ]
+    },
+    {
+      "title": "Blocks",
+      "id": "blocks",
+      "components": [
+        { "title": "Search Help", "id": "search-help" },
+        { "title": "Cards Category", "id": "cards-category" },
+        { "title": "Category Card", "id": "category-card" },
+        { "title": "Cards Article", "id": "cards-article" },
+        { "title": "Article Card", "id": "article-card" },
+        { "title": "Modal", "id": "modal" },
+        { "title": "Modal Item", "id": "modal-item" },
+        { "title": "Section Metadata", "id": "section-metadata" }
+      ]
+    }
+  ]
+}

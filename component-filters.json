@@ -1,0 +1,30 @@
+{
+  "filters": [
+    {
+      "id": "section",
+      "components": [
+        "text",
+        "title",
+        "image",
+        "button",
+        "search-help",
+        "cards-category",
+        "cards-article",
+        "modal",
+        "section-metadata"
+      ]
+    },
+    {
+      "id": "cards-category",
+      "components": ["category-card"]
+    },
+    {
+      "id": "cards-article",
+      "components": ["article-card"]
+    },
+    {
+      "id": "modal",
+      "components": ["modal-item"]
+    }
+  ]
+}
