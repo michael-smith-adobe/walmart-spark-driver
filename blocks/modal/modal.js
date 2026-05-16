@@ -1,11 +1,28 @@
+function openModal(id) {
+  const overlay = document.getElementById(id);
+  if (overlay) {
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeModal(overlay) {
+  overlay.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
 export default function decorate(block) {
   const rows = [...block.children];
+  const ids = [];
+
   rows.forEach((row) => {
     const cells = [...row.children];
     const id = cells[0]?.textContent?.trim().toLowerCase().replace(/\s+/g, '-');
     const parentLabel = cells[1]?.textContent?.trim() || '';
     const title = cells[2]?.textContent?.trim() || '';
     const bodyCell = cells[3];
+
+    ids.push(id);
 
     const overlay = document.createElement('div');
     overlay.className = 'modal-overlay';
@@ -49,38 +66,29 @@ export default function decorate(block) {
     overlay.append(dialog);
     document.body.append(overlay);
 
-    closeBtn.addEventListener('click', () => {
-      overlay.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-    });
-
+    closeBtn.addEventListener('click', () => closeModal(overlay));
     overlay.addEventListener('click', (e) => {
-      if (e.target === overlay) {
-        overlay.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-      }
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && overlay.getAttribute('aria-hidden') === 'false') {
-        overlay.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-      }
+      if (e.target === overlay) closeModal(overlay);
     });
   });
 
   block.textContent = '';
   block.style.display = 'none';
 
-  document.addEventListener('click', (e) => {
-    const link = e.target.closest('a[href*="#modal-"]');
-    if (!link) return;
-    e.preventDefault();
-    const modalId = link.getAttribute('href').split('#')[1];
-    const overlay = document.getElementById(modalId);
-    if (overlay) {
-      overlay.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal-overlay[aria-hidden="false"]').forEach(closeModal);
     }
+  });
+
+  ids.forEach((id) => {
+    const modalId = `modal-${id}`;
+    document.querySelectorAll(`a[href="#${modalId}"], a[href$="#${modalId}"]`).forEach((link) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        openModal(modalId);
+      });
+    });
   });
 }
