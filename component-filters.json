@@ -1,0 +1,39 @@
+[
+  {
+    "id": "main",
+    "components": [
+      "section"
+    ]
+  },
+  {
+    "id": "section",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title",
+      "search-help",
+      "cards-category",
+      "cards-article",
+      "modal"
+    ]
+  },
+  {
+    "id": "cards-category",
+    "components": [
+      "category-card"
+    ]
+  },
+  {
+    "id": "cards-article",
+    "components": [
+      "article-card"
+    ]
+  },
+  {
+    "id": "modal",
+    "components": [
+      "modal-item"
+    ]
+  }
+]
