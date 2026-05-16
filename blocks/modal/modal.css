@@ -1,0 +1,134 @@
+/* modal trigger — styled as button */
+.modal-trigger {
+  display: block;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.modal-trigger strong {
+  display: block;
+  padding: 12px 24px;
+  background-color: var(--link-color);
+  color: #fff;
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.modal-trigger:hover strong {
+  background-color: #1954c6;
+}
+
+/* modal overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background-color: rgb(0 0 0 / 40%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition: opacity 0.3s;
+}
+
+.modal-overlay[aria-hidden='true'] {
+  display: none;
+}
+
+/* modal dialog — slides up from bottom like Figma design */
+.modal-dialog {
+  background-color: #fff;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  border-radius: 16px 16px 0 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (width >= 900px) {
+  .modal-overlay {
+    align-items: center;
+  }
+
+  .modal-dialog {
+    border-radius: 16px;
+    max-height: 80vh;
+  }
+}
+
+/* header — blue bar with X and parent label, sized to match Figma */
+.modal-header {
+  background-color: #0071ce;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  min-height: 72px;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.modal-close:hover {
+  opacity: 0.8;
+}
+
+.modal-parent {
+  font-family: var(--body-font-family);
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/* yellow accent bar */
+.modal-accent {
+  height: 4px;
+  background: linear-gradient(to right, #ffc220 0%, #ffc220 18%, transparent 18%);
+}
+
+/* body content */
+.modal-body {
+  padding: 24px;
+}
+
+.modal-body h1 {
+  font-family: var(--body-font-family);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+
+.modal-body p {
+  font-family: var(--body-font-family);
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--text-color);
+  margin: 0 0 16px;
+}
+
+.modal-body ul {
+  margin: 0 0 16px;
+  padding-left: 24px;
+}
+
+.modal-body li {
+  font-family: var(--body-font-family);
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
