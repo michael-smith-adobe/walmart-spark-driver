@@ -181,8 +181,19 @@ function loadDelayed() {
 }
 
 async function loadPage() {
-  await loadEager(document);
-  await loadLazy(document);
+  try {
+    await loadEager(document);
+  } catch (e) {
+    // eslint-disable-next-line no-console
+    console.error('Error in loadEager', e);
+    document.body.classList.add('appear');
+  }
+  try {
+    await loadLazy(document);
+  } catch (e) {
+    // eslint-disable-next-line no-console
+    console.error('Error in loadLazy', e);
+  }
   loadDelayed();
 }
 

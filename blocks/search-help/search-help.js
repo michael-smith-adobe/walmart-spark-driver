@@ -205,7 +205,8 @@ function searchBox(block, config) {
 }
 
 export default async function decorate(block) {
-  const source = block.querySelector('a[href]')?.href || `${window.hlx.codeBasePath}/query-index.json`;
+  const codeBasePath = (window.hlx && window.hlx.codeBasePath) || '';
+  const source = block.querySelector('a[href]')?.href || `${codeBasePath}/query-index.json`;
   block.innerHTML = '';
   block.append(
     searchBox(block, { source }),
