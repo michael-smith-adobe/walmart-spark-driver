@@ -1,0 +1,114 @@
+/* search box — matches source #search-container */
+.search-help .search-help-box {
+  position: relative;
+  max-width: 570px;
+  margin: 0 auto;
+}
+
+.search-help .search-help-box .icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  filter: brightness(0) invert(1);
+  opacity: 0.7;
+}
+
+.search-help .search-help-box input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 11px 44px 11px 18px;
+  border-radius: 5px;
+  border: 1px solid #1954c6;
+  background-color: #2c73ff;
+  color: #e8f0ff;
+  font-family: var(--body-font-family);
+  font-size: 17.6px;
+  height: 51px;
+}
+
+.search-help .search-help-box input::placeholder {
+  color: #e8f0ff;
+  opacity: 0.8;
+}
+
+.search-help .search-help-box input:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+  background-color: #3a7fff;
+}
+
+/* search results */
+.search-help ul.search-help-results {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  padding-left: 0;
+  list-style: none;
+  max-width: 570px;
+  margin: 12px auto 0;
+}
+
+.search-help ul.search-help-results > li {
+  border: none;
+  background-color: var(--background-color);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.search-help ul.search-help-results > li > a {
+  display: block;
+  height: 100%;
+  background-color: transparent;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 10px 16px;
+}
+
+.search-help ul.search-help-results > li > a:hover,
+.search-help ul.search-help-results > li > a:focus {
+  text-decoration: none;
+  background-color: var(--light-color);
+}
+
+.search-help ul.search-help-results > li .search-help-result-title,
+.search-help ul.search-help-results > li p {
+  padding: 0;
+}
+
+.search-help ul.search-help-results > li .search-help-result-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.search-help ul.search-help-results > li .search-help-result-title a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.search-help ul.search-help-results > li p {
+  font-size: 14px;
+  margin: 4px 0 0;
+  color: var(--dark-color);
+}
+
+.search-help ul.search-help-results > li .search-help-result-image {
+  display: none;
+}
+
+/* no results */
+.search-help ul.search-help-results.no-results {
+  display: block;
+}
+
+.search-help ul.search-help-results.no-results > li {
+  border: none;
+  color: #e8f0ff;
+  background: transparent;
+}

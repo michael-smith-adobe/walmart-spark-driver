@@ -1,0 +1,86 @@
+/* cards grid — single column on mobile, 2 on tablet, 3 on desktop */
+.cards-category > ul {
+  list-style: none;
+  margin: 56px 0 0;
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+@media (width >= 600px) {
+  .cards-category > ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 30px;
+    padding: 0;
+  }
+}
+
+@media (width >= 900px) {
+  .cards-category > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* card — matches source .card.hvr-card */
+.cards-category > ul > li {
+  border: 1px solid #bcc0c8;
+  border-radius: 2px;
+  background-color: #fefeff;
+  margin-bottom: 24px;
+  transition: box-shadow 0.3s, border-color 0.3s, background-color 0.3s;
+}
+
+@media (width >= 600px) {
+  .cards-category > ul > li {
+    margin-bottom: 0;
+  }
+}
+
+.cards-category > ul > li:hover {
+  border-color: var(--link-color);
+}
+
+/* card link — entire card is clickable */
+.cards-category > ul > li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--link-color);
+  padding: 20px;
+  min-height: 140px;
+  text-align: center;
+}
+
+.cards-category > ul > li a:hover {
+  text-decoration: none;
+}
+
+/* card icon — matches source .card-icon 48×48 with 24px margin */
+.cards-category .cards-category-card-image {
+  line-height: 0;
+  margin-bottom: 24px;
+}
+
+.cards-category .cards-category-card-image picture img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  aspect-ratio: auto;
+}
+
+/* card title — matches source .card-title */
+.cards-category .cards-category-card-body {
+  margin: 0 0 12px;
+}
+
+.cards-category .cards-category-card-body h3 {
+  margin: 0;
+  font-size: 17.6px;
+  font-weight: 700;
+  font-family: var(--heading-font-family);
+  line-height: 1.1;
+  color: var(--link-color);
+}

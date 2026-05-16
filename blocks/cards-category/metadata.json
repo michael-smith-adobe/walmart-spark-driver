@@ -1,0 +1,40 @@
+{
+  "variantName": "cards-category",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-15T23:46:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://sparkdriverapp-walmart.helpdocs.io/l/en",
+    "originPage": "help center landing page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "category-nav",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "icon + linked title",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "help center category pages",
+      "knowledge base topic navigation",
+      "icon-based navigation grids",
+      "support portal category listings"
+    ],
+    "notSuitableFor": [
+      "product cards with large images",
+      "blog article cards with descriptions",
+      "team member cards with photos"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/l/en"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-15T23:46:00.000Z"
+  }
+}

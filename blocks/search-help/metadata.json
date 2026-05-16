@@ -1,0 +1,39 @@
+{
+  "variantName": "search-help",
+  "baseBlock": "search",
+  "version": "1.0.0",
+  "created": "2026-05-15T23:46:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://sparkdriverapp-walmart.helpdocs.io/l/en",
+    "originPage": "help center landing page",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "help-search",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "search input + results list",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "help center pages",
+      "knowledge base landing pages",
+      "support portal search"
+    ],
+    "notSuitableFor": [
+      "product search with filters",
+      "e-commerce search",
+      "complex faceted search"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/l/en"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-15T23:46:00.000Z"
+  }
+}
