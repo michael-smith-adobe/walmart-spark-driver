@@ -60,22 +60,22 @@
   }
 }
 
-/* header — blue bar with X and parent label */
+/* header — blue bar with X and parent label, sized to match Figma */
 .modal-header {
   background-color: #0071ce;
   color: #fff;
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 20px 24px;
-  min-height: 60px;
+  gap: 16px;
+  padding: 24px;
+  min-height: 72px;
 }
 
 .modal-close {
   background: none;
   border: none;
   color: #fff;
-  font-size: 22px;
+  font-size: 28px;
   cursor: pointer;
   padding: 0;
   line-height: 1;
@@ -88,7 +88,7 @@
 
 .modal-parent {
   font-family: var(--body-font-family);
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 400;
 }
 
