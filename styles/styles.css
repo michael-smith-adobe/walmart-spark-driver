@@ -38,7 +38,7 @@
   --heading-font-size-xs: 16px;
 
   /* nav height */
-  --nav-height: 0px;
+  --nav-height: 64px;
 }
 
 /* fallback font */

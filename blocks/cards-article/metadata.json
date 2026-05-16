@@ -1,0 +1,40 @@
+{
+  "variantName": "cards-article",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-16T00:42:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://sparkdriverapp-walmart.helpdocs.io/l/en/category/l88z07r5hj-earnings",
+    "originPage": "help center category page (Earnings)",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "article-listing",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "linked title + description",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "help center article listing pages",
+      "knowledge base category pages",
+      "FAQ index pages",
+      "article directory pages with title and description"
+    ],
+    "notSuitableFor": [
+      "category navigation with icons (use cards-category)",
+      "product cards with large images",
+      "team member cards with photos"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/l/en/category/l88z07r5hj-earnings"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-16T00:42:00.000Z"
+  }
+}

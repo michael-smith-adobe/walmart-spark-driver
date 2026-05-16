@@ -125,9 +125,9 @@ export default async function decorate(block) {
   while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
 
   const classes = ['brand', 'sections', 'tools'];
+  const sections = [...nav.querySelectorAll(':scope > .section')];
   classes.forEach((c, i) => {
-    const section = nav.children[i];
-    if (section) section.classList.add(`nav-${c}`);
+    if (sections[i]) sections[i].classList.add(`nav-${c}`);
   });
 
   const navBrand = nav.querySelector('.nav-brand');
@@ -163,6 +163,16 @@ export default async function decorate(block) {
   // prevent mobile nav behavior on window resize
   toggleMenu(nav, navSections, isDesktop.matches);
   isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
+
+  // language selector click toggle
+  const navTools = nav.querySelector('.nav-tools');
+  if (navTools) {
+    navTools.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navTools.classList.toggle('open');
+    });
+    document.addEventListener('click', () => navTools.classList.remove('open'));
+  }
 
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';

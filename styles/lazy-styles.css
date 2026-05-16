@@ -1,1 +1,52 @@
-/* add global styles that can be loaded post LCP here */
+/* category page header — centered icon/title/count */
+main > .section:has(h2) .default-content-wrapper {
+  text-align: center;
+}
+
+/* breadcrumb */
+main > .section:has(h2) .default-content-wrapper > p:first-child {
+  font-size: 16px;
+  line-height: 24px;
+  color: #bcc0c8;
+}
+
+main > .section:has(h2) .default-content-wrapper > p:first-child a {
+  color: #bcc0c8;
+}
+
+/* category icon */
+main > .section:has(h2) .default-content-wrapper picture img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+/* category title */
+main > .section:has(h2) .default-content-wrapper h2 {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: var(--heading-font-family);
+  line-height: 22px;
+  color: #4b4c50;
+  margin: 0 0 4px;
+}
+
+/* article count */
+main > .section:has(h2) .default-content-wrapper > p:last-child {
+  font-size: 16px;
+  color: #818a91;
+  margin: 0;
+}
+
+/* article body images — centered, constrained */
+main > .section:has(h1) .default-content-wrapper p > picture {
+  display: block;
+  text-align: center;
+}
+
+main > .section:has(h1) .default-content-wrapper p > picture img {
+  max-width: 244px;
+  height: auto;
+  display: inline-block;
+}
