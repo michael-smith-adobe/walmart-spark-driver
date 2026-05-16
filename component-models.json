@@ -104,10 +104,6 @@
     ]
   },
   {
-    "id": "cards-category",
-    "fields": []
-  },
-  {
     "id": "cards-article",
     "fields": [
       {
