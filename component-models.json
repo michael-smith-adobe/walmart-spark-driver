@@ -28,21 +28,8 @@
         "options": [
           { "name": "Default", "value": "" },
           { "name": "Blue", "value": "blue" },
-          { "name": "Light", "value": "light" },
-          { "name": "Highlight", "value": "highlight" }
+          { "name": "Light", "value": "light" }
         ]
-      }
-    ]
-  },
-  {
-    "id": "image",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
       }
     ]
   },
@@ -74,6 +61,18 @@
     ]
   },
   {
+    "id": "image",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      }
+    ]
+  },
+  {
     "id": "button",
     "fields": [
       {
@@ -88,82 +87,6 @@
         "name": "linkText",
         "value": "",
         "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "search-help",
-    "fields": [
-      {
-        "component": "text",
-        "name": "source",
-        "value": "",
-        "label": "Query Index URL",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "category-card",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Icon Image",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Category Link",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "article-card",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Article Content",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "modal-item",
-    "fields": [
-      {
-        "component": "text",
-        "name": "triggerId",
-        "value": "",
-        "label": "Trigger ID",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "parentLabel",
-        "value": "",
-        "label": "Parent Label",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "title",
-        "value": "",
-        "label": "Modal Title",
-        "valueType": "string"
-      },
-      {
-        "component": "richtext",
-        "name": "body",
-        "value": "",
-        "label": "Modal Body Content",
         "valueType": "string"
       }
     ]
