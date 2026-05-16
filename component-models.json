@@ -115,15 +115,8 @@
         "multi": false
       },
       {
-        "component": "text",
-        "name": "title",
-        "value": "",
-        "label": "Category Title",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "link",
+        "component": "richtext",
+        "name": "text",
         "value": "",
         "label": "Category Link",
         "valueType": "string"
@@ -134,24 +127,10 @@
     "id": "article-card",
     "fields": [
       {
-        "component": "text",
-        "name": "title",
-        "value": "",
-        "label": "Article Title",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "link",
-        "value": "",
-        "label": "Article Link",
-        "valueType": "string"
-      },
-      {
         "component": "richtext",
-        "name": "description",
+        "name": "text",
         "value": "",
-        "label": "Description",
+        "label": "Article Content",
         "valueType": "string"
       }
     ]
